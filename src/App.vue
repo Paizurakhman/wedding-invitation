@@ -4,12 +4,17 @@ import CalendarSection from "@/components/CalendarSection.vue";
 import PhotoSection from "@/components/PhotoSection.vue";
 import InfoSection from "@/components/InfoSection.vue";
 import CountdownSection from "@/components/CountdownSection.vue";
+
+const getFile = () => {
+  return new URL('/src/assets/video/wedding.mp4', import.meta.url)
+}
+
 </script>
 
 <template>
   <div>
     <video-background
-        src="/src/assets/video/wedding.mp4"
+        src="video/wedding.mp4"
         style="max-height: 40vh; height: 100vh;"
         overlay="linear-gradient(45deg,#2a4ae430,#fb949e6b)"
     >

@@ -39,7 +39,7 @@ const toggleAudio = () =>  {
               <i class="fa-solid fa-circle-play" v-else></i>
             </div>
             <audio id="audio-player" ref="audio">
-              <source src="audio/music.mp3" type="audio/mpeg">
+              <source src="@/assets/audio/music.mp3" type="audio/mpeg">
             </audio>
           </div>
           <span> Раиса</span>

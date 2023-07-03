@@ -75,6 +75,7 @@ const toggleAudio = () =>  {
     font-family: AsylbekMo, Arial, sans-serif;
     color: white;
 
+    text-align: center;
     span {
       font-size: 3em;
       line-height: 3rem;
@@ -105,6 +106,8 @@ const toggleAudio = () =>  {
     position: absolute;
     width: 100%;
     height: 100%;
+    display: grid;
+    place-content: center;
     animation: 1s heartBeat 0.5s infinite;
   }
   .play {

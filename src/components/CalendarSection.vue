@@ -35,12 +35,22 @@ export default {
 <style scoped lang="scss">
   .calendar-section {
     background-color: #ffffff;
-    //background-image: url("https://thumb.tildacdn.com/tild3361-6262-4663-a235-356430656439/-/format/webp/photo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     font-family: 'Lumanosimo', cursive;
-    color: #b37832;
+    position: relative;
+    padding: 20px 0;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url("@/assets/images/calendar-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+    }
     @media screen and (min-width: 1200px){
       padding: 50px 0;
       background-size: 50% 100%;
@@ -91,12 +101,12 @@ export default {
           position: relative;
           cursor: pointer;
           &.active {
-            color: crimson;
+            color: #b37832;
             font-weight: 700;
             &:before {
               content: "";
-              width: 60px;
-              height: 60px;
+              width: 50px;
+              height: 50px;
               position: absolute;
               background-image: url("@/assets/images/heart2.png");
               background-position: center;

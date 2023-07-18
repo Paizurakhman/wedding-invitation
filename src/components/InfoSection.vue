@@ -48,7 +48,7 @@ export default {
     margin: 0 auto;
   }
   .title {
-    color: rgb(175, 197, 159);
+    //color: rgb(175, 197, 159);
     font-size: 1.25em;
     font-weight: 400;
   }

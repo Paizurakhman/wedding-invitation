@@ -34,13 +34,17 @@ export default {
 
 <style scoped lang="scss">
   .calendar-section {
-    background-color: #fafafa;
-    background-image: url("@/assets/images/wedding-card.png");
+    background-color: #ffffff;
+    //background-image: url("https://thumb.tildacdn.com/tild3361-6262-4663-a235-356430656439/-/format/webp/photo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    font-family: KalenderblattGrotesk;
-    padding: 50px 0;
+    background-position: center;
+    font-family: 'Lumanosimo', cursive;
+    color: #b37832;
+    @media screen and (min-width: 1200px){
+      padding: 50px 0;
+      background-size: 50% 100%;
+    }
     .container {
       display: flex;
       justify-content: center;
@@ -49,7 +53,6 @@ export default {
       flex: 1;
       height: max-content;
       max-width: 600px;
-      padding: 20px;
       position: relative;
       overflow: hidden;
       &-header {

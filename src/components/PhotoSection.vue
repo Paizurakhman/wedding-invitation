@@ -18,7 +18,7 @@ export default {
   position: relative;
   overflow: hidden;
   .bg-photo {
-    min-height: 60vh;
+    min-height: 70vh;
 
     background: linear-gradient(rgba(175, 197, 159, 0), rgba(175, 197, 159, 0)), url("@/assets/images/photo.jpg") center center / cover no-repeat fixed;
     img:last-child {

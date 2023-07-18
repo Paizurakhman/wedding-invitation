@@ -6,6 +6,7 @@ import InfoSection from "@/components/InfoSection.vue";
 import CountdownSection from "@/components/CountdownSection.vue";
 import Modal from "@/components/Modal.vue";
 import { ref} from "vue";
+import AcceptForm from "@/components/AcceptForm.vue";
 const showEnvelope = ref(false)
 const audio = ref()
 const isPlayed = ref(false)
@@ -26,26 +27,29 @@ const toggleAudio = () =>  {
     <modal v-model="showEnvelope"/>
     <video-background
         src="video/wedding.mp4"
-        style="max-height: 40vh; height: 100vh;"
+        style="max-height: 50vh; height: 100vh;"
         overlay="linear-gradient(45deg,#2a4ae430,#fb949e6b)"
     >
       <div class="video-bg">
         <div class="name">
           <span>Пайзурахман </span>
-          <div class="audio">
-            <img src="@/assets/images/heart.png" alt="" width="48">
-            <div @click="toggleAudio" class="play">
-              <i class="fa-solid fa-circle-pause" v-if="isPlayed"></i>
-              <i class="fa-solid fa-circle-play" v-else></i>
-            </div>
-            <audio id="audio-player" ref="audio">
-              <source src="@/assets/audio/music.mp3" type="audio/mpeg">
-            </audio>
-          </div>
+          <br>
+          <span>&</span>
+          <br>
           <span> Раиса</span>
         </div>
 
         <p>19.08.2023</p>
+
+        <div class="audio">
+          <div @click="toggleAudio" class="play">
+            <i class="fa-solid fa-volume-high" v-if="isPlayed"></i>
+            <i class="fa-solid fa-volume-xmark" v-else></i>
+          </div>
+          <audio id="audio-player" ref="audio">
+            <source src="@/assets/audio/music.mp3" type="audio/mpeg">
+          </audio>
+        </div>
       </div>
     </video-background>
 
@@ -54,6 +58,7 @@ const toggleAudio = () =>  {
     <PhotoSection/>
     <InfoSection/>
     <CountdownSection/>
+    <AcceptForm />
   </div>
 </template>
 
@@ -64,10 +69,7 @@ const toggleAudio = () =>  {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("@/assets/images/video-bg-desktop.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
+  background-color: rgba(0,0,0,0.3);
   display: grid;
   place-content: center;
 
@@ -90,26 +92,19 @@ const toggleAudio = () =>  {
     margin-top: 10px;
   }
 
-  @media screen and (max-width: 576px) {
-    background-image: url("@/assets/images/video-bg.png");
-    span {
-      display: block;
-    }
-  }
 }
 .audio {
-  position: relative;
+  position: fixed;
   height: 48px;
   width: 48px;
   margin: 0 auto;
-  img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-content: center;
-    animation: 1s heartBeat 0.5s infinite;
-  }
+  right: 16px;
+  bottom: 16px;
+  background: #ffffff;
+  color: #023a15;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1;
   .play {
     position: absolute;
     width: 100%;
@@ -118,23 +113,10 @@ const toggleAudio = () =>  {
     place-content: center;
   }
   i {
-    font-size: 28px;
+    font-size: 20px;
   }
   audio {
     display: none;
-
-  }
-}
-
-@keyframes heartBeat {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 </style>

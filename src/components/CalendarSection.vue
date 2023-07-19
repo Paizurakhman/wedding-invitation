@@ -34,10 +34,15 @@ export default {
 
 <style scoped lang="scss">
   .calendar-section {
-    background-color: #ffffff;
     font-family: 'Lumanosimo', cursive;
     position: relative;
     padding: 20px 0;
+    text-shadow:
+        -1px 0 1px #c6bb9f,
+        0 1px 1px #c6bb9f,
+        5px 5px 10px rgba(0, 0, 0, 0.5),
+        -5px -5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-background-clip: text;
     &:before {
       content: "";
       position: absolute;

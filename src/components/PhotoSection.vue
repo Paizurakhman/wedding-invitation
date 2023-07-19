@@ -29,7 +29,6 @@ export default {
 
     @media screen and (max-width: 576px){
       background-attachment: scroll;
-      background-position: center 50px;
     }
   }
 }

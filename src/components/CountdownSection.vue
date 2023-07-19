@@ -81,8 +81,8 @@ export default {
   min-height: 30vh;
   display: grid;
   place-items: center;
-  color: rgb(2, 58, 21);
-  font-family: KalenderblattGrotesk;
+  color: #181818;
+  font-family: 'Lumanosimo', cursive;
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(@/assets/images/countdown-bg.jpg) center center / cover no-repeat;
   &-content {
     ul {

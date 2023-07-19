@@ -101,7 +101,7 @@ const toggleAudio = () =>  {
   right: 16px;
   bottom: 16px;
   background: #ffffff;
-  color: #023a15;
+  color: #181818;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   z-index: 1;

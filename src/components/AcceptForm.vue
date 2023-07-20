@@ -77,6 +77,7 @@ export default {
         isSuccess.value = true
         state.name = ''
         state.field = ''
+        errorText.value = ''
       }).finally(() => {
         isLoading.value = false
       })

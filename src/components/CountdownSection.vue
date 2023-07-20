@@ -83,8 +83,11 @@ export default {
   place-items: center;
   color: #181818;
   font-family: 'Lumanosimo', cursive;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(@/assets/images/countdown-bg.jpg) center center / cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(@/assets/images/timer-bg.jpg) center center / cover no-repeat;
   &-content {
+    p {
+      margin-bottom: 0;
+    }
     ul {
       display: flex;
       max-width: 800px;

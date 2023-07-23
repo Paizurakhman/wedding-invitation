@@ -2,7 +2,8 @@
   <div class="invitation-section">
     <div class="container">
       <div class="invitation-text">
-        <h2>Құрметті! ағайын-туыс, бауырлар, құда-жекжат, дос-жаран, әріптестер!</h2>
+        <h2 v-if="name">Құрметті {{name}}!</h2>
+        <h2 v-else>Құрметті! ағайын-туыс, бауырлар, құда-жекжат, дос-жаран, әріптестер!</h2>
       </div>
 
       <div class="invitation-text">
@@ -22,8 +23,16 @@
 </template>
 
 <script>
+import {useRoute} from "vue-router";
+
 export default {
-  name: "InvitationSection"
+  name: "InvitationSection",
+  setup() {
+    const route = useRoute()
+    const {name} = route.query
+
+    return { name }
+  }
 }
 </script>
 
